@@ -1,0 +1,97 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5em auto;
+    flex-direction: column;
+  }
+  
+  .card {
+    width: 60%;
+    margin: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem;
+    background: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+    text-align: center;
+  }
+
+  .card > h1 {
+    color: #00ff88;
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    width: 15em;
+    height: 100px;
+    margin: 1em;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.3em;
+    letter-spacing: 3px;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+    text-align: center;
+  }
+
+  /* -------------------------------------------------------- */
+  .credit {
+    color: #00ff88;
+    font-weight: 800;
+    font-size: 5em;
+    margin-bottom: 15px;
+  }
+
+  input {
+    width: 50%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    /* Deixa a borda marcada ao clicar pra digitar */
+    outline: none;
+    margin: 2em;
+  }
+  
+   label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+   input::placeholder {
+    color: #f0ffff94;
+  }
+  
+  .data ul {
+    text-align: center;
+    display: flex;
+    list-style: none;
+    margin: 3em;
+    justify-content: space-between;
+   flex-wrap: wrap;
+  }
+
+  .data li {
+    margin: 1em;
+  }
+
+  span {
+    color: #00ff88;
+  }
+  a {
+    text-decoration: none;
+    color: #201b2c;
+  }

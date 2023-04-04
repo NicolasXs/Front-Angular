@@ -1,0 +1,19 @@
+<div class="main">
+    <div class="card">
+      <h1>Saldo disponível <span>R$ {{data.balance}}</span></h1>
+      <input type="number"  [(ngModel)]="credit"/>
+      <div>
+        <button routerLink="/client" class="btn">Voltar</button>
+        <button class="btn" (click)="deposit()">Confirmar</button>
+      </div>
+    </div>
+    <h1>Detalhes da conta</h1>
+    <div class="data">
+      <ul>
+        <li>O número da conta é: <span>{{ data.accountNumber }}</span></li>
+        <li>O tipo de conta é: <span>{{ data.accountType }}</span></li>
+        <li>O proprietário da conta é: <span>{{ data.owner.name }}</span></li>
+      </ul>
+    </div>
+  </div>
+  

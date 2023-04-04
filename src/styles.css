@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alkatra', sans-serif;
+    background: #201b2c;
+    color: aliceblue;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #77ffc0 #201b2c;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #201b2c;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #00ff88;
+    border-radius: 10px;
+  }
