@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Iclient } from '../interfaces/Iclient';
 
-
 @Injectable({
   providedIn: 'root',
 })
@@ -26,12 +25,14 @@ export class ClientService {
   }
 
   public balanceDeposit(_id: string, balance: number): Observable<Iclient> {
-    return this.http.patch<Iclient>(`${this.urlApi}/${_id}/depositar`, { balance });
+    return this.http.patch<Iclient>(`${this.urlApi}/${_id}/deposit`, {
+      balance,
+    });
   }
-  
 
   public balanceWithdraw(_id: string, balance: number): Observable<Iclient> {
-    return this.http.patch<Iclient>(`${this.urlApi}/${_id}/sacar`, { balance });
+    return this.http.patch<Iclient>(`${this.urlApi}/${_id}/withdraw`, {
+      balance,
+    });
   }
 }
-
