@@ -20,19 +20,34 @@ export class LoginComponent {
   ) {}
 
   login() {
-    if (this.email == null || this.password == null) {
+    if (!this.email || !this.password) {
       Swal.fire({
         icon: 'error',
-        text: 'Algum campo está vazio, confirme os dados e tente novamente.',
+        text: 'Por favor, preencha todos os campos e tente novamente.',
       });
-    } else {
-      this.loginService
-        .validateUser(this.email, this.password)
-        .subscribe((response: any) => {
-          console.log('Dados liberados', response);
-          this.router.navigate(['client']);
-          this.clientService.getId(response._id);
-        });
+      return;
     }
+
+    this.loginService.validateUser(this.email, this.password).subscribe(
+      (response: any) => {
+        console.log('Dados liberados');
+        this.clientService.getId(response._id);
+        this.router.navigate(['client']);
+      },
+       (error: any) => {
+        let errorMessage: string;
+        if (error.status === 401) {
+          errorMessage = 'E-mail ou senha inválidos.';
+        } else if (error.status === 0) {
+          errorMessage = 'Não foi possível conectar ao servidor.';
+        } else {
+          errorMessage = error.error.message;
+        }
+        Swal.fire({
+          icon: 'error',
+          text: `Ocorreu um erro: ${errorMessage}`,
+        });
+      }
+    );
   }
 }

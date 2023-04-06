@@ -20,7 +20,6 @@ export class CheckBalanceComponent {
   getData() {
     this.clientService.getData().subscribe((data) => {
       this.data = data;
-      console.log(this.data);
     });
   }
 }
