@@ -11,6 +11,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { DepositComponent } from './pages/user-interface/deposit/deposit.component';
 import { WithdrawComponent } from './pages/user-interface/withdraw/withdraw.component';
 import { CheckBalanceComponent } from './pages/user-interface/check-balance/check-balance.component';
+import { BankAccountComponent } from './pages/register/bank-account/bank-account.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CheckBalanceComponent } from './pages/user-interface/check-balance/chec
     DepositComponent,
     WithdrawComponent,
     CheckBalanceComponent,
+    BankAccountComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

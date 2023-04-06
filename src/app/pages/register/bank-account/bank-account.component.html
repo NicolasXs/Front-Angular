@@ -1,0 +1,27 @@
+<div class="main-login">
+  <div class="login">
+    <div class="card-login">
+      <h1>Crie sua conta!</h1>
+      <div class="textfield">
+        <input
+          type="number"
+          placeholder="accountNumber"
+          [(ngModel)]="accountNumber"
+        />
+        <input type="password" placeholder="ownerId" [(ngModel)]="ownerId" />
+        <select [(ngModel)]="accountType">
+          <option value="CURRENT">CURRENT</option>
+          <option value="SAVINGS">SAVINGS</option>
+        </select>
+        <div class="textfield">
+          <button class="btn" (click)="register()">Registrar Agora!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <span
+      >Para conseguir o OwnerId no memento, necessário consultar o banco.</span
+    >
+  </div>
+</div>

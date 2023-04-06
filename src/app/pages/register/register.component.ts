@@ -36,7 +36,7 @@ export class RegisterComponent {
         .createUser(this.userName, this.email, this.password)
         .subscribe((response: any) => {
           console.log('Dados cadastrados', response);
-          this.router.navigate(['client']);
+          this.router.navigate(['register-bank-account']);
         });
     }
   }
